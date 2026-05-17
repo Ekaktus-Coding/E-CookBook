@@ -26,13 +26,17 @@ function get(filter) {
   return data.find((item) => item.id === filter.id) || null;
 }
 
-function list(pageInfo = {}) {
+function list(query = {}) {
   const data = readData();
+  const filtered = query.recipeId
+    ? data.filter((item) => item.recipeId === query.recipeId)
+    : data;
+  const pageInfo = query.pageInfo || {};
   const pageIndex = pageInfo.pageIndex || 0;
   const pageSize = pageInfo.pageSize || 10;
   const start = pageIndex * pageSize;
-  const itemList = data.slice(start, start + pageSize);
-  return { itemList, pageInfo: { pageIndex, pageSize, total: data.length } };
+  const itemList = filtered.slice(start, start + pageSize);
+  return { itemList, pageInfo: { pageIndex, pageSize, total: filtered.length } };
 }
 
 function update(uuObject) {
@@ -53,4 +57,13 @@ function remove(id) {
   return deleted[0];
 }
 
-module.exports = { create, get, list, update, remove };
+function removeByRecipeId(recipeId) {
+  const data = readData();
+  const remaining = data.filter((item) => item.recipeId !== recipeId);
+  const removed = data.filter((item) => item.recipeId === recipeId);
+  if (removed.length === 0) return [];
+  writeData(remaining);
+  return removed;
+}
+
+module.exports = { create, get, list, update, remove, removeByRecipeId };

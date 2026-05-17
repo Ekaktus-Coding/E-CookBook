@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": "recipe-svickova",
+    "title": "Svíčková na smetaně",
+    "description": "Classic Czech beef with creamy vegetable sauce and dumplings."
+  },
+  {
+    "id": "recipe-bramboraky",
+    "title": "Czech Potato Pancakes",
+    "description": "Crispy potato pancakes with garlic and marjoram."
+  },
+  {
+    "id": "recipe-kulajda",
+    "title": "Kulajda Soup",
+    "description": "Creamy Czech mushroom soup with dill and potatoes."
+  },
+  {
+    "id": "recipe-chicken-risotto",
+    "title": "Chicken Risotto",
+    "description": "Simple creamy risotto with chicken, peas, and parmesan."
+  },
+  {
+    "id": "recipe-spaghetti-bolognese",
+    "title": "Spaghetti Bolognese",
+    "description": "Easy pasta dinner with rich tomato and beef sauce."
+  },
+  {
+    "id": "recipe-greek-salad",
+    "title": "Greek Salad",
+    "description": "Fresh vegetable salad with feta, olives, and olive oil."
+  },
+  {
+    "id": "recipe-pancakes",
+    "title": "Breakfast Pancakes",
+    "description": "Soft breakfast pancakes served with fruit or syrup."
+  },
+  {
+    "id": "recipe-apple-strudel",
+    "title": "Apple Strudel",
+    "description": "Simple dessert with apples, cinnamon, and puff pastry."
+  },
+  {
+    "id": "recipe-tomato-soup",
+    "title": "Tomato Basil Soup",
+    "description": "Light tomato soup with basil, onion, and cream."
+  },
+  {
+    "id": "recipe-schnitzel",
+    "title": "Chicken Schnitzel",
+    "description": "Golden breaded chicken served with potatoes or salad."
+  }
+]
